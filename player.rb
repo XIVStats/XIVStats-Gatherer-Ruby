@@ -60,7 +60,7 @@ class Player
     sylph
     hw_complete
     hw_31_complete
-    legacy
+    legacy_player
   ]
 
   def initialize

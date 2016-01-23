@@ -189,18 +189,18 @@ class XIVStats
       , level_blacksmith, level_armorer, level_goldsmith, level_leatherworker, level_weaver, level_alchemist
       , level_culinarian, level_miner, level_botanist, level_fisher, p30days, p60days, p90days, p180days, p270days, p360days, p450days, p630days, p960days
       , prearr, prehw, artbook, beforemeteor, beforethefall, soundtrack, saweternalbond, sightseeing, arr_25_complete, comm50, moogleplush
-      , hildibrand, ps4collectors, dideternalbond, arrcollector, kobold, sahagin, amaljaa, sylph, hw_complete, hw_31_complete, legacy) 
+      , hildibrand, ps4collectors, dideternalbond, arrcollector, kobold, sahagin, amaljaa, sylph, hw_complete, hw_31_complete, legacy_player) 
       values ('#{player.id}',\"#{player.player_name}\",'#{player.realm}',\"#{player.race}\",'#{player.gender}','#{player.grand_company}'
       ,'#{player.level_gladiator}','#{player.level_pugilist}','#{player.level_marauder}','#{player.level_lancer}','#{player.level_archer}'
       ,'#{player.level_rogue}','#{player.level_conjurer}','#{player.level_thaumaturge}','#{player.level_arcanist}','#{player.level_darkknight}'
       ,'#{player.level_machinist}','#{player.level_astrologian}','#{player.level_carpenter}','#{player.level_blacksmith}','#{player.level_armorer}'
       ,'#{player.level_goldsmith}','#{player.level_leatherworker}','#{player.level_weaver}','#{player.level_alchemist}','#{player.level_culinarian}'
       ,'#{player.level_miner}','#{player.level_botanist}','#{player.level_fisher}','#{player.p30days}','#{player.p60days}','#{player.p90days}','#{player.p180days}'
-      ,'#{player.p270days}','#{player.p360days}','#{player.p450days}','#{player.p630days}','#{player.prearr}','#{player.prehw}','#{player.artbook}'
+      ,'#{player.p270days}','#{player.p360days}','#{player.p450days}','#{player.p630days}','#{player.p960days}','#{player.prearr}','#{player.prehw}','#{player.artbook}'
       ,'#{player.beforemeteor}','#{player.beforethefall}','#{player.soundtrack}','#{player.saweternalbond}','#{player.sightseeing}'
       ,'#{player.arr_25_complete}','#{player.comm50}','#{player.moogleplush}','#{player.hildibrand}','#{player.ps4collectors}'
       ,'#{player.dideternalbond}','#{player.arrcollector}','#{player.kobold}','#{player.sahagin}','#{player.amaljaa}','#{player.sylph}'
-      ,'#{player.hw_complete}','#{player.hw_31_complete}','#{player.legacy}');")
+      ,'#{player.hw_complete}','#{player.hw_31_complete}','#{player.legacy_Player}');")
   end
 
   # Main function. Creates the database, cycles through character profiles and 
@@ -219,7 +219,7 @@ class XIVStats
       ,p360days INTEGER,p450days INTEGER,p630days INTEGER,p960days INTEGER,prearr INTEGER,prehw INTEGER, artbook INTEGER, beforemeteor INTEGER, beforethefall INTEGER
       ,soundtrack INTEGER,saweternalbond INTEGER,sightseeing INTEGER,arr_25_complete INTEGER,comm50 INTEGER,moogleplush INTEGER
       ,hildibrand INTEGER, ps4collectors INTEGER, dideternalbond INTEGER, arrcollector INTEGER, kobold INTEGER, sahagin INTEGER, amaljaa INTEGER, sylph INTEGER
-      ,hw_complete INTEGER, hw_31_complete INTEGER, legacy INTEGER);")    
+      ,hw_complete INTEGER, hw_31_complete INTEGER, legacy_player INTEGER);")    
 
     # Do the player IDs in the range specified at the command-line
     for i in @lowest_id..@highest_id
@@ -261,7 +261,7 @@ class XIVStats
         player.sylph = get_mount(page, "Laurel Goobbue")
         player.hw_complete = get_mount(page, "Migardsormr")
         player.hw_31_complete = get_minion(page, "Wind-up Haurchefant")
-	player.legacy = get_mount(page, "Legacy Chocobo")
+	player.legacy_player = get_mount(page, "Legacy Chocobo")
         levels = get_levels(page)
 
         player.level_gladiator = levels[0]
