@@ -200,7 +200,7 @@ class XIVStats
       ,'#{player.beforemeteor}','#{player.beforethefall}','#{player.soundtrack}','#{player.saweternalbond}','#{player.sightseeing}'
       ,'#{player.arr_25_complete}','#{player.comm50}','#{player.moogleplush}','#{player.hildibrand}','#{player.ps4collectors}'
       ,'#{player.dideternalbond}','#{player.arrcollector}','#{player.kobold}','#{player.sahagin}','#{player.amaljaa}','#{player.sylph}'
-      ,'#{player.hw_complete}','#{player.hw_31_complete}','#{player.legacy_Player}');")
+      ,'#{player.hw_complete}','#{player.hw_31_complete}','#{player.legacy_player}');")
   end
 
   # Main function. Creates the database, cycles through character profiles and 
