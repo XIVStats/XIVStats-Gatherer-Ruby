@@ -189,7 +189,7 @@ class XIVStats
       , level_blacksmith, level_armorer, level_goldsmith, level_leatherworker, level_weaver, level_alchemist
       , level_culinarian, level_miner, level_botanist, level_fisher, p30days, p60days, p90days, p180days, p270days, p360days, p450days, p630days, p960days
       , prearr, prehw, artbook, beforemeteor, beforethefall, soundtrack, saweternalbond, sightseeing, arr_25_complete, comm50, moogleplush
-      , hildibrand, ps4collectors, dideternalbond, arrcollector, kobold, sahagin, amaljaa, sylph, hw_complete, hw_31_complete, legacy_player, cnj_30, ifrit_ex, garuda_ex, titan_ex, levi_ex, ramuh_ex, shiva_ex, all_6_ponies, diadem_99, bismarck_ex, thordan_ex, ravana_ex, sepi_ex, nidhogg_ex) 
+      , hildibrand, ps4collectors, dideternalbond, arrcollector, kobold, sahagin, amaljaa, sylph, hw_complete, hw_31_complete, legacy_player, ifrit_ex, garuda_ex, titan_ex, levi_ex, ramuh_ex, shiva_ex, all_6_ponies, diadem_99, bismarck_ex, thordan_ex, ravana_ex, sepi_ex, nidhogg_ex) 
       values ('#{player.id}',\"#{player.player_name}\",'#{player.realm}',\"#{player.race}\",'#{player.gender}','#{player.grand_company}'
       ,'#{player.level_gladiator}','#{player.level_pugilist}','#{player.level_marauder}','#{player.level_lancer}','#{player.level_archer}'
       ,'#{player.level_rogue}','#{player.level_conjurer}','#{player.level_thaumaturge}','#{player.level_arcanist}','#{player.level_darkknight}'
@@ -200,7 +200,7 @@ class XIVStats
       ,'#{player.beforemeteor}','#{player.beforethefall}','#{player.soundtrack}','#{player.saweternalbond}','#{player.sightseeing}'
       ,'#{player.arr_25_complete}','#{player.comm50}','#{player.moogleplush}','#{player.hildibrand}','#{player.ps4collectors}'
       ,'#{player.dideternalbond}','#{player.arrcollector}','#{player.kobold}','#{player.sahagin}','#{player.amaljaa}','#{player.sylph}'
-      ,'#{player.hw_complete}','#{player.hw_31_complete}','#{player.legacy_Player}','#{player.cnj_30}','#{player.ifrit_ex}','#{player.garuda_ex}','#{player.titan_ex}','#{player.levi_ex}','#{player.ramuh_ex}','#{player.shiva_ex}','#{player.all_6_ponies}','#{player.diadem_99}','#{player.bismarck_ex}','#{player.thordan_ex}','#{player.ravana_ex}','#{player.sepi_ex}','#{player.nidhogg_ex}');")
+      ,'#{player.hw_complete}','#{player.hw_31_complete}','#{player.legacy_Player}','#{player.ifrit_ex}','#{player.garuda_ex}','#{player.titan_ex}','#{player.levi_ex}','#{player.ramuh_ex}','#{player.shiva_ex}','#{player.all_6_ponies}','#{player.diadem_99}','#{player.bismarck_ex}','#{player.thordan_ex}','#{player.ravana_ex}','#{player.sepi_ex}');")
   end
 
   # Main function. Creates the database, cycles through character profiles and 
@@ -219,7 +219,7 @@ class XIVStats
       ,p360days INTEGER,p450days INTEGER,p630days INTEGER,p960days INTEGER,prearr INTEGER,prehw INTEGER, artbook INTEGER, beforemeteor INTEGER, beforethefall INTEGER
       ,soundtrack INTEGER,saweternalbond INTEGER,sightseeing INTEGER,arr_25_complete INTEGER,comm50 INTEGER,moogleplush INTEGER
       ,hildibrand INTEGER, ps4collectors INTEGER, dideternalbond INTEGER, arrcollector INTEGER, kobold INTEGER, sahagin INTEGER, amaljaa INTEGER, sylph INTEGER
-      ,hw_complete INTEGER, hw_31_complete INTEGER, legacy_player INTEGER, cnj_30 INTEGER, ifrit_ex INTEGER, garuda_ex INTEGER, titan_ex INTEGER, levi_ex INTEGER, ramuh_ex INTEGER, shiva_ex INTEGER, all_6_ponies INTEGER, diadem_99 INTEGER, bismarck_ex INTEGER, thordan_ex INTEGER, ravana_ex INTEGER, sepi_ex INTEGER, nidhogg_ex INTEGER);")    
+      ,hw_complete INTEGER, hw_31_complete INTEGER, legacy_player INTEGER, ifrit_ex INTEGER, garuda_ex INTEGER, titan_ex INTEGER, levi_ex INTEGER, ramuh_ex INTEGER, shiva_ex INTEGER, all_6_ponies INTEGER, diadem_99 INTEGER, bismarck_ex INTEGER, thordan_ex INTEGER, ravana_ex INTEGER, sepi_ex INTEGER,);")    
 
     # Do the player IDs in the range specified at the command-line
     for i in @lowest_id..@highest_id
@@ -270,7 +270,6 @@ class XIVStats
 	    player.legacy_player = get_mount(page, "Legacy Chocobo")
           
     # Primal Ponies
-        player.cnj_30 = get_mount(page, "Unicorn")
         player.ifrit_ex = get_mount(page, "Aithon")
         player.garuda_ex = get_mount(page, "Xanthos")
         player.titan_ex = get_mount(page, "Gullfaxi")
@@ -285,7 +284,6 @@ class XIVStats
         player.thordan_ex = get_mount(page, "Round Lanner")
         player.ravana_ex = get_mount(page, "Rose Lanner")
         player.sepi_ex = get_mount(page, "Warring Lanner")
-        player.nidhogg_ex = get_mount(page, "... Lanner") # NOT IMPLEMENTED YET IN FFXIV
           
         levels = get_levels(page)
 
