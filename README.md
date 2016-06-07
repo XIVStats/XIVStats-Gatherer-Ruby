@@ -38,8 +38,8 @@ from the following URLs.
 
 | Release | Live Patch | Live Expansion | Download |
 |---------|------------|----------------|----------|
-| April 2015 | 2.5 | A Realm Reborn | [Link](https://jonathanprice.org/xiv/players.db)
-| July 2015 | 3.0 | Heavensward | [Link](https://jonathanprice.org/xiv/players-20150801.db) 
+| April 2015 | 2.5 | A Realm Reborn | [Link](https://ffxivcensus.com/databases/players.db)
+| July 2015 | 3.0 | Heavensward | [Link](https://ffxivcensus.com/databases/players-20150801.db) 
 
 A simple example PHP web page has been included. This web page draws data
 directly from the database and uses it to draw a few charts. Due to the
@@ -107,3 +107,12 @@ This table contain the following columns:
 - moogleplush (bought a moogle plush)
 - hildibrand (Completed the 2.5 hildibrand quest line)
 - ps4collectors (Bought the PS4 collectors edition for A Realm Reborn)
+- dideternalbond (has been married)
+- arrcollector (bought the collectors edition for A Realm Reborn)
+- kobold (Got the maximum kobold reputation)
+- sahagin (Got the maximum sahagin reputation)
+- amaljaa (Got the maximum amalj'aa reputation)
+- sylph (Got the maximum sylph reputation)
+- hw_complete (Completed the 3.0 storyline)
+- hw_31_complete (Completed patch 3.1)
+- legacy_player (Played during 1.x)

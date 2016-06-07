@@ -61,6 +61,19 @@ class Player
     hw_complete
     hw_31_complete
     legacy_player
+    ifrit_ex_mount
+    garuda_ex_mount
+    titan_ex_mount
+    levi_ex_mount
+    ramuh_ex_mount
+    shiva_ex_mount
+    all_6_ponies_mount
+    diadem_99_mount
+    bismarck_ex_mount
+    thordan_ex_mount
+    ravana_ex_mount
+    sepi_ex_mount
+    nidhogg_ex_mount
   ]
 
   def initialize
