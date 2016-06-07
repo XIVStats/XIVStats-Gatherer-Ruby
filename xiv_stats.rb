@@ -189,7 +189,9 @@ class XIVStats
       , level_blacksmith, level_armorer, level_goldsmith, level_leatherworker, level_weaver, level_alchemist
       , level_culinarian, level_miner, level_botanist, level_fisher, p30days, p60days, p90days, p180days, p270days, p360days, p450days, p630days, p960days
       , prearr, prehw, artbook, beforemeteor, beforethefall, soundtrack, saweternalbond, sightseeing, arr_25_complete, comm50, moogleplush
-      , hildibrand, ps4collectors, dideternalbond, arrcollector, kobold, sahagin, amaljaa, sylph, hw_complete, hw_31_complete, legacy_player, ifrit_ex_mount, garuda_ex_mount, titan_ex_mount, levi_ex_mount, ramuh_ex_mount, shiva_ex_mount, all_6_ponies_mount, diadem_99_mount, bismarck_ex_mount, thordan_ex_mount, ravana_ex_mount, sepi_ex_mount, nidhogg_ex) 
+      , hildibrand, ps4collectors, dideternalbond, arrcollector, kobold, sahagin, amaljaa, sylph, hw_complete, hw_31_complete, legacy_player, ifrit_ex_mount
+      , garuda_ex_mount, titan_ex_mount, levi_ex_mount, ramuh_ex_mount, shiva_ex_mount, all_6_ponies_mount, diadem_99_mount, bismarck_ex_mount, thordan_ex_mount
+      , ravana_ex_mount, sepi_ex_mount, nidhogg_ex_mount) 
       values ('#{player.id}',\"#{player.player_name}\",'#{player.realm}',\"#{player.race}\",'#{player.gender}','#{player.grand_company}'
       ,'#{player.level_gladiator}','#{player.level_pugilist}','#{player.level_marauder}','#{player.level_lancer}','#{player.level_archer}'
       ,'#{player.level_rogue}','#{player.level_conjurer}','#{player.level_thaumaturge}','#{player.level_arcanist}','#{player.level_darkknight}' 
@@ -200,7 +202,9 @@ class XIVStats
       ,'#{player.beforemeteor}','#{player.beforethefall}','#{player.soundtrack}','#{player.saweternalbond}','#{player.sightseeing}'
       ,'#{player.arr_25_complete}','#{player.comm50}','#{player.moogleplush}','#{player.hildibrand}','#{player.ps4collectors}'
       ,'#{player.dideternalbond}','#{player.arrcollector}','#{player.kobold}','#{player.sahagin}','#{player.amaljaa}','#{player.sylph}'
-      ,'#{player.hw_complete}','#{player.hw_31_complete}','#{player.legacy_Player}','#{player.ifrit_ex_mount}','#{player.garuda_ex_mount}','#{player.titan_ex_mount}','#{player.levi_ex_mount}','#{player.ramuh_ex_mount}','#{player.shiva_ex_mount}','#{player.all_6_ponies_mount}','#{player.diadem_99_mount}','#{player.bismarck_ex_mount}','#{player.thordan_ex_mount}','#{player.ravana_ex_mount}','#{player.sepi_ex_mount}');")
+      ,'#{player.hw_complete}','#{player.hw_31_complete}','#{player.legacy_Player}','#{player.ifrit_ex_mount}','#{player.garuda_ex_mount}','#{player.titan_ex_mount}'
+      ,'#{player.levi_ex_mount}','#{player.ramuh_ex_mount}','#{player.shiva_ex_mount}','#{player.all_6_ponies_mount}','#{player.diadem_99_mount}','#{player.bismarck_ex_mount}'
+      ,'#{player.thordan_ex_mount}','#{player.ravana_ex_mount}','#{player.sepi_ex_mount}','#{player.nidhogg_ex_mount}');")
   end
 
   # Main function. Creates the database, cycles through character profiles and 
@@ -219,7 +223,9 @@ class XIVStats
       ,p360days INTEGER,p450days INTEGER,p630days INTEGER,p960days INTEGER,prearr INTEGER,prehw INTEGER, artbook INTEGER, beforemeteor INTEGER, beforethefall INTEGER
       ,soundtrack INTEGER,saweternalbond INTEGER,sightseeing INTEGER,arr_25_complete INTEGER,comm50 INTEGER,moogleplush INTEGER
       ,hildibrand INTEGER, ps4collectors INTEGER, dideternalbond INTEGER, arrcollector INTEGER, kobold INTEGER, sahagin INTEGER, amaljaa INTEGER, sylph INTEGER
-      ,hw_complete INTEGER, hw_31_complete INTEGER, legacy_player INTEGER, ifrit_ex_mount INTEGER, garuda_ex_mount INTEGER, titan_ex_mount INTEGER, levi_ex_mount INTEGER, ramuh_ex_mount INTEGER, shiva_ex_mount INTEGER, all_6_ponies_mount INTEGER, diadem_99_mount INTEGER, bismarck_ex_mount INTEGER, thordan_ex_mount INTEGER, ravana_ex_mount INTEGER, sepi_ex_mount INTEGER,);")    
+      ,hw_complete INTEGER, hw_31_complete INTEGER, legacy_player INTEGER, ifrit_ex_mount INTEGER, garuda_ex_mount INTEGER, titan_ex_mount INTEGER, levi_ex_mount INTEGER
+      , ramuh_ex_mount INTEGER, shiva_ex_mount INTEGER, all_6_ponies_mount INTEGER, diadem_99_mount INTEGER, bismarck_ex_mount INTEGER, thordan_ex_mount INTEGER
+      , ravana_ex_mount INTEGER, sepi_ex_mount INTEGER, nidhogg_ex_mount INTEGER);")    
 
     # Do the player IDs in the range specified at the command-line
     for i in @lowest_id..@highest_id
@@ -267,7 +273,7 @@ class XIVStats
         player.amaljaa = get_mount(page, "Cavalry Drake")
         player.sylph = get_mount(page, "Laurel Goobbue")
         player.hw_complete = get_mount(page, "Migardsormr")
-	    player.legacy_player = get_mount(page, "Legacy Chocobo")
+	player.legacy_player = get_mount(page, "Legacy Chocobo")
           
     # Primal Ponies
         player.ifrit_ex_mount = get_mount(page, "Aithon")
@@ -284,6 +290,7 @@ class XIVStats
         player.thordan_ex_mount = get_mount(page, "Round Lanner")
         player.ravana_ex_mount = get_mount(page, "Rose Lanner")
         player.sepi_ex_mount = get_mount(page, "Warring Lanner")
+        player.nidhogg_ex_mount = get_mount(page, "Dark Lanner")
           
         levels = get_levels(page)
 
