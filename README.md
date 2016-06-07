@@ -2,7 +2,8 @@
 
 XIV Stats is primarily a script to produce a database of player
 information for FFXIV. The information is pulled from directly from the
-lodestone. An example PHP file has been included to demonstrate
+lodestone. An example PHP file is available [here](https://github.com/XIVStats/XIVStats)
+to demonstrate
 visualising the statistics. You can also view a live demo of the example
 web page by visiting [ffxivcensus.com](http://ffxivcensus.com/).
 
@@ -40,17 +41,6 @@ from the following URLs.
 |---------|------------|----------------|----------|
 | April 2015 | 2.5 | A Realm Reborn | [Link](https://ffxivcensus.com/databases/players.db)
 | July 2015 | 3.0 | Heavensward | [Link](https://ffxivcensus.com/databases/players-20150801.db) 
-
-A simple example PHP web page has been included. This web page draws data
-directly from the database and uses it to draw a few charts. Due to the
-large amount of data that has to be compiled to produce the charts,
-the page takes a very long time to render (around 5 minutes on my server).
-If you were planning to embed data from the database in a web page, it 
-would be recommended to compile a static copy of the page, and re-compile
-it if you re-scan the lodestone. A simple way to compile the page is shown
-below:
-
-    php index.php > index.html
 
 # Data Structure #
 
@@ -116,3 +106,16 @@ This table contain the following columns:
 - hw_complete (Completed the 3.0 storyline)
 - hw_31_complete (Completed patch 3.1)
 - legacy_player (Played during 1.x)
+- ifrit_ex_mount
+- garuda_ex_mount
+- titan_ex_mount
+- levi_ex_mount
+- ramuh_ex_mount
+- shiva_ex_mount
+- all_6_ponies_mount
+- diadem_99_mount
+- bismarck_ex_mount
+- thordan_ex_mount
+- ravana_ex_mount
+- sepi_ex_mount
+- nidhogg_ex_mount
