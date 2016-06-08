@@ -274,7 +274,7 @@ class XIVStats
         player.amaljaa = get_mount(page, "Cavalry Drake")
         player.sylph = get_mount(page, "Laurel Goobbue")
         player.hw_complete = get_mount(page, "Migardsormr")
-	    player.legacy_player = get_mount(page, "Legacy Chocobo")
+		player.legacy_player = get_mount(page, "Legacy Chocobo")
           
         # Primal Ponies
         player.ifrit_ex_mount = get_mount(page, "Aithon")
