@@ -202,7 +202,7 @@ class XIVStats
       ,'#{player.beforemeteor}','#{player.beforethefall}','#{player.soundtrack}','#{player.saweternalbond}','#{player.sightseeing}'
       ,'#{player.arr_25_complete}','#{player.comm50}','#{player.moogleplush}','#{player.hildibrand}','#{player.ps4collectors}'
       ,'#{player.dideternalbond}','#{player.arrcollector}','#{player.kobold}','#{player.sahagin}','#{player.amaljaa}','#{player.sylph}'
-      ,'#{player.hw_complete}','#{player.hw_31_complete}','#{player.legacy_Player}','#{player.ifrit_ex_mount}','#{player.garuda_ex_mount}','#{player.titan_ex_mount}'
+      ,'#{player.hw_complete}','#{player.hw_31_complete}','#{player.legacy_player}','#{player.ifrit_ex_mount}','#{player.garuda_ex_mount}','#{player.titan_ex_mount}'
       ,'#{player.levi_ex_mount}','#{player.ramuh_ex_mount}','#{player.shiva_ex_mount}','#{player.all_6_ponies_mount}','#{player.diadem_99_mount}','#{player.bismarck_ex_mount}'
       ,'#{player.thordan_ex_mount}','#{player.ravana_ex_mount}','#{player.sepi_ex_mount}','#{player.nidhogg_ex_mount}');")
   end
@@ -238,7 +238,7 @@ class XIVStats
         player.gender = get_gender(page)
         player.grand_company = get_grand_company(page) 
           
-     # Veteran Rewards       
+        # Veteran Rewards       
         player.p30days = get_minion(page, "Wind-up Cursor")
         player.p60days = get_minion(page, "Black Chocobo Chick")
         player.p90days = get_minion(page, "Beady Eye")
@@ -249,7 +249,7 @@ class XIVStats
         player.p630days = get_minion(page, "Wind-up Nanamo")
         player.p960days = get_minion(page, "Wind-up Firion")
           
-    # Minions
+        # Minions
         player.prearr = get_minion(page, "Cait Sith Doll")
         player.prehw = get_minion(page, "Chocobo Chick Courier")
         player.artbook = get_minion(page, "Model Enterprise")
@@ -263,9 +263,9 @@ class XIVStats
         player.moogleplush = get_minion(page, "Wind-up Delivery Moogle")
         player.hildibrand = get_minion(page, "Wind-up Gentleman")
         player.ps4collectors = get_minion(page, "Wind-up Moogle")
-        player.hw_31_complete = get_minion(page, "Wind-up Haurchefant") # FFXIV Heavensward - Patch 3.1 Story Completion
+        player.hw_31_complete = get_minion(page, "Wind-up Haurchefant")
           
-    # Mounts
+        # Mounts
         player.dideternalbond = get_mount(page, "Ceremony Chocobo")
         player.arrcollector = get_mount(page, "Coeurl")
         player.kobold = get_mount(page, "Bomb Palanquin")
@@ -275,7 +275,7 @@ class XIVStats
         player.hw_complete = get_mount(page, "Migardsormr")
 	player.legacy_player = get_mount(page, "Legacy Chocobo")
           
-    # Primal Ponies
+        # Primal Ponies
         player.ifrit_ex_mount = get_mount(page, "Aithon")
         player.garuda_ex_mount = get_mount(page, "Xanthos")
         player.titan_ex_mount = get_mount(page, "Gullfaxi")
@@ -285,7 +285,7 @@ class XIVStats
         player.all_6_ponies_mount = get_mount(page, "Kirin")
         player.diadem_99_mount = get_mount(page, "Pegasus")
           
-    # Primal Pigeons
+        # Primal Pigeons
         player.bismarck_ex_mount = get_mount(page, "White Lanner")
         player.thordan_ex_mount = get_mount(page, "Round Lanner")
         player.ravana_ex_mount = get_mount(page, "Rose Lanner")
@@ -318,7 +318,7 @@ class XIVStats
         player.level_botanist = levels[21]
         player.level_fisher = levels[22]
 
-#        puts "ID: #{i} | Name: #{player.player_name} | Realm: #{player.realm} | Race: #{player.race} | Gender: #{player.gender} | GC: #{player.grand_company}"
+        #puts "ID: #{i} | Name: #{player.player_name} | Realm: #{player.realm} | Race: #{player.race} | Gender: #{player.gender} | GC: #{player.grand_company}"
         puts "ID: #{i} | Name: #{player.player_name} | Realm: #{player.realm} | Race: #{player.race} | Gender: #{player.gender} | 30Days: #{player.p30days}"
 	write_to_db(player)
 
