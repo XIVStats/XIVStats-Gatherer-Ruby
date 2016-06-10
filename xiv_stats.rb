@@ -264,6 +264,7 @@ class XIVStats
         player.hildibrand = get_minion(page, "Wind-up Gentleman")
         player.ps4collectors = get_minion(page, "Wind-up Moogle")
         player.hw_31_complete = get_minion(page, "Wind-up Haurchefant")
+        player.hw_33_complete = get_minion(page, "Wind-up Aymeric")
           
         # Mounts
         player.dideternalbond = get_mount(page, "Ceremony Chocobo")
